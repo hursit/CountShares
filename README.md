@@ -4,7 +4,7 @@ Service developed for Symfony.
 
 Description
 -----------
-Allow to count for a given URL the likes of this URL.
+Count total shares on social networks for a given URL.
 
 Working with
 ----------
