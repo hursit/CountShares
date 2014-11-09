@@ -2,6 +2,10 @@
 
 namespace Tlconseil\BlogBundle\Service;
 
+/**
+ * Class CountShares
+ * @package Tlconseil\BlogBundle\Service
+ */
 class CountShares
 {
     /**
@@ -36,7 +40,7 @@ class CountShares
      */
     private function getCountFacebook($url)
     {
-        $json_string = file_get_contents(sprintf('http://graph.facebook.com/?ids=%s', $url));
+        $json_string = file_get_contents(sprintf('https://api.facebook.com/method/links.getStats?urls=%s&format=json', $url));
         $json = json_decode($json_string, true);
         if (!empty($json[$url]['shares']))
             return $json[$url]['shares'];
